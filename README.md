@@ -9,6 +9,7 @@ ClearPic_NER/
 ├──az_stemming/
 │   └── lemmatizator.py         # Класс лемматизор для азербайджанского языка
 ├── az_ner_news.py              # Основной класс ExtractedEntities
+├── ExtractEntities.py          # Обработка статей с выгрузкой в новую коллекцию
 ├── ExtractEntitiesToJson.py    # Скрипт для обработки статей из MongoDB c сохранением JSON в папку output/
 ├── requirements.txt            # Зависимости проекта
 └── config/                     # Конфигурационные файлы
