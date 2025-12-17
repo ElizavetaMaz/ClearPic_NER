@@ -10,10 +10,11 @@ load_dotenv()
 
 # Загрузка переменных окружения
 MONGO_URI = os.getenv("MONGO_URI")
-NER_PATH = os.getenv("NER_PATH")
-TYPES_LOC_PATH = os.getenv("TYPES_LOC_PATH")
-LABELS_PATH = os.getenv("LABELS_PATH")
-ORGS_TYPES_PATH = os.getenv("ORGS_TYPES_PATH")
+NER_PATH = os.getenv("NER_PATH", "./ner_azerbaijan_local")
+TYPES_LOC_PATH = os.getenv("TYPES_LOC_PATH", "config/types_city_country.json")
+LABELS_PATH = os.getenv("LABELS_PATH", "config/label_mapping.json")
+ORGS_TYPES_PATH = os.getenv("ORGS_TYPES_PATH", "config/types_org.json")
+OUTPUT_PATH = os.getenv("OUTPUT_PATH", "output/output_all.json")
 
 # Настройки
 SOURCE_COLLECTION = "articles"  # Исходная коллекция
@@ -64,11 +65,12 @@ def main():
 
         results.append(article)
 
+    os.makedirs("output", exist_ok=True)
     # Сохранение результатов
-    with open("output_all.json", "w", encoding="utf-8") as f:
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=4, ensure_ascii=False)
 
-    print(f"Результаты сохранены в output_all.json")
+    print(f"Результаты сохранены в {OUTPUT_PATH}")
 
     # Закрываем соединение
     client.close()
