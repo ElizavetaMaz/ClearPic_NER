@@ -33,22 +33,20 @@ ClearPic_NER/
 
 ## 📖 Использование
 
-`  from az_ner_news import ExtractedEntities`
-`  import json`
-`  `
-`  # Инициализация экстрактора`
-`  extractor = ExtractedEntities(`
-`      ner_model_path="models/xlm-roberta-ner",`
-`      labels_path="config/labels_mapping.json",`
-`      types_loc_path="config/location_types.json",`
-`      org_types_path="config/organization_types.json"`
-`  )`
-``  
-`  # Обработка текста`
-`  text = "Prezident İlham Əliyev Bakı şəhərində yeni zavodun açılışında iştirak edib."`
-`  entities, remaining_text = extractor.extract_from_text(text)`
-``  
+`  from az_ner_news import ExtractedEntities
+  import json
 
-
-`  print(json.dumps(entities, indent=4, ensure_ascii=False))`
+  # Инициализация экстрактора
+  extractor = ExtractedEntities(
+      ner_model_path="models/xlm-roberta-ner",
+      labels_path="config/labels_mapping.json",
+      types_loc_path="config/location_types.json",
+      org_types_path="config/organization_types.json"
+  )
+  
+  # Обработка текста
+  text = "Prezident İlham Əliyev Bakı şəhərində yeni zavodun açılışında iştirak edib."
+  entities, remaining_text = extractor.extract_from_text(text)
+  
+  print(json.dumps(entities, indent=4, ensure_ascii=False))`
 
