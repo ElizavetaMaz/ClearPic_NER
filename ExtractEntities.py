@@ -117,7 +117,7 @@ def process_and_save_articles(client, extractor, limit=None):
                 continue
 
             # Извлечение сущностей
-            extracted_entities, remaining_text = extractor.extract_from_text(text)
+            extracted_entities = extractor.extract_from_text(text)
 
             # Создаем документ для новой коллекции
             processed_article = {
