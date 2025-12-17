@@ -193,7 +193,6 @@ class ExtractedEntities:
 
             links.append({
                 "name": person_lemmatized,
-                "original_name": person_text,
                 "position": position,
                 "mentions": {
                     "start_char": str(start),
@@ -392,5 +391,6 @@ class ExtractedEntities:
 
         # Убираем лишние пробелы
         text = re.sub(r"\s+", " ", text).strip()
+
 
         return text
