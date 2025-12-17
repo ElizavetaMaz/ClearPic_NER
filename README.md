@@ -9,13 +9,13 @@ ClearPic_NER/
 ├──az_stemming/
 │   └── lemmatizator.py         # Класс лемматизор для азербайджанского языка
 ├── az_ner_news.py              # Основной класс ExtractedEntities
-├── ExtractEntitiesToJson.py    # Скрипт для обработки статей из MongoDB c сохранением в JSON 
+├── ExtractEntitiesToJson.py    # Скрипт для обработки статей из MongoDB c сохранением JSON в папку output/
 ├── requirements.txt            # Зависимости проекта
-├── config/                     # Конфигурационные файлы
-│   ├── labels_mapping.json     # Маппинг меток NER модели
-│   ├── types_city_country.json # Типы локаций (город/страна и т.д.)
-│   └── types_org.json          # Типы организаций
-└── output/                     # Результаты обработки
+└── config/                     # Конфигурационные файлы
+    ├── labels_mapping.json     # Маппинг меток NER модели
+    ├── types_city_country.json # Типы локаций (город/страна и т.д.)
+    └── types_org.json          # Типы организаций
+
 ```
 ## 🚀 Быстрый старт (проекта)
 
