@@ -1,0 +1,49 @@
+{
+    "COURT": [
+        "məhkəmə",
+        "məhkəməsi",
+        "apellyasiya",
+        "ali",
+        "konstitusiya"
+    ],
+    "BANK": [
+        "bank",
+        "qəbiristan",
+        "kapital",
+        "kredit",
+        "investisiya"
+    ],
+    "GOVERMENT": [
+        "nazirliyi",
+        "nazirlik",
+        "idarə",
+        "komitəsi",
+        "komissiyası",
+        "agentliyi",
+        "fond",
+        "şurası",
+        "dövlət",
+        "milli",
+        "ərazi"
+    ],
+    "EDUCATIONS": [
+        "universiteti",
+        "institutu",
+        "akademiyası",
+        "məktəbi",
+        "kolleci"
+    ],
+    "MEDICAL": [
+        "xəstəxanası",
+        "klinikası",
+        "dispanseri",
+        "tibb",
+        "həkim"
+    ],
+    "POLICE": [
+        "polis",
+        "prokurorluq",
+        "daxili işlər",
+        "narkotik"
+    ]
+}
