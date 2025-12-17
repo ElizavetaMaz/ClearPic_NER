@@ -226,6 +226,10 @@ class ExtractedEntities:
             if not self._is_proper_name(loc_text):
                 continue
 
+            # Проверяем, не является ли это частью уже найденной локации
+            if self._is_part_of_existing_name(loc_text, entities_locations):
+                continue
+
             start = loc["start"]
             end = loc["end"]
             loc_type = "COUNTRY"
